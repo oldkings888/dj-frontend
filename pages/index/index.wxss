@@ -1,0 +1,73 @@
+/**index.wxss**/
+page{
+  background: #fff2d9;
+}
+image {
+  width: 100%;
+}
+.cu-bar .search-form input {
+  line-height: 68rpx;
+}
+.cu-bar .search-form {
+  background-color: #fff2d9;
+}
+.bg-green {
+  background-color: #d2263a;
+}
+.content {
+  width: 100%;
+  background-color: #fff2d9;
+  text-align: center;
+  padding: 0 30rpx 130rpx;
+}
+
+.content .learn {
+  color: #d2263a;
+  font-size: 50rpx;
+  font-weight: 700;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left: 28rpx;
+  margin-right: 28rpx;
+}
+
+.learn::before,
+.learn::after {
+  display: table-cell;
+  content: '';
+  width: 50%;
+  background: linear-gradient(#d2263a, #d2263a) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}
+
+.content .big {
+  font-size: 70rpx;
+}
+.lab {
+  padding: 28rpx 10rpx;
+  border-radius: 4rpx;
+  float: left;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 40rpx;
+
+}
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: '';
+  clear: both;
+}
+.serac_img {
+   width:100%;
+   background-color: #fff2d9;
+   text-align: center;
+   position: fixed;
+   bottom: 0;
+   left:0;
+}
+.serac_img image {
+  width: 119rpx;
+}

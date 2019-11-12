@@ -1,0 +1,54 @@
+
+page {
+  background-color: #f1f1f1;
+}
+
+.cu-custom {
+  height: 146rpx;
+}
+.action.border-custom {
+  width: 87px;
+  height: 32px;
+  margin-left: calc(320px - 310px);
+}
+.cu-custom .cu-bar {
+  height: 146rpx;
+  padding-top: 50rpx;
+}
+.bg-gradual-blue {
+  background-color:#D2263A ;
+}
+.bg-green.search {
+  background-color: #d2263a;
+  margin-right: 12rpx;
+}
+.bg-green-daochu {
+  background-color: skyblue;
+  color: #fff;
+}
+.solid-bottom::after {
+  border-bottom: 1rpx solid #e1e1e1;
+}
+
+.time {
+  color: #C1C1C1;
+  font-size: 24rpx;
+  text-align: left;
+  padding: 8rpx 0;
+} 
+
+.cu-card.article>.cu-item .content .desc {
+  display: inline;
+}
+.noList {
+  text-align: center;
+  font-size: 30rpx;
+}
+.subject {
+  color: red;
+}
+.cu-tag {
+  font-size: 22rpx;
+  float: right;
+  margin-top: 26rpx;
+}

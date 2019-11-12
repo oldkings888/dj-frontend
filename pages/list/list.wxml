@@ -1,0 +1,37 @@
+
+<cu-custom bgColor="bg-gradual-blue" isCustom="{{true}}">
+  <view slot="content">搜索</view>
+</cu-custom>
+<view class="cu-bar search bg-white">
+    <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" confirm-type="search" value="{{searchValue}}" bindinput="wxsearchInput"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green search shadow-blur round" bindtap="searchNews">搜索</button>
+      <button disabled="{{newsList.length===0}}" class="cu-btn shadow-blur round bg-green-daochu" bindtap='copyText' data-text="{{contents}}">导出  | W</button>
+    </view>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="text-orange "></text> 搜索结果
+    </view>
+</view>
+<view class="cu-card article {{isCard?'no-card':''}}">
+  <view wx:if="{{newsList.length===0}}" class="noList">没有搜索到相关内容</view>
+  <view class="cu-item shadow" wx:for="{{newsList}}" wx:key="{{newsList[index]}}">
+    <view class="title">
+      <view class="text-cut">{{newsList[index].title}}<view class="subject cu-tag line-red" wx:if="{{newsList[index].isSubject==='TRUE'}}">专题系列</view></view>
+    </view>
+    <view class="content" bindtap="checkDetails" data-id="{{newsList[index].id}}">
+      <view class="desc">
+      <rich-text nodes="{{newsList[index].content}}"></rich-text>
+        <view>
+          <view class="time" decode="{{true}}">
+            <text> {{newsList[index].org}}　{{newsList[index].orgDate}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

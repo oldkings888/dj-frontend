@@ -1,0 +1,31 @@
+
+<cu-custom bgColor="bg-gradual-blue" isCustom="{{true}}">
+  <view slot="content">详情</view>
+</cu-custom>
+<wxs src="../../wxs/subutils.wxs" module="tools" />
+<view class="padding-xs flex align-center jianbian">
+  <view class="flex-sub text-center">
+    <view class="text-xl padding">
+      <text class="text-black text-bold">{{details.title}}</text>
+      <!-- <text wx:if="{{subject!==''}}" class="subject">{{subject}}</text> -->
+    </view>
+    <view class="time">{{details.org}}　{{tools.sub(details.contentDate)}}</view>
+    <view wx:for="{{details.content}}" wx:key="{{details.content[index]}}">
+      <rich-text nodes="{{item}}"></rich-text>
+    </view>
+    <view class="contentTime">{{details.orgDate}}</view>
+  </view>
+</view>
+<view class="about" wx:if="{{details.isSubject==='TRUE'}}">
+  <text>系列知识</text>
+</view>
+<view class="cu-timeline" wx:if="{{details.isSubject==='TRUE'}}" wx:for="{{subjects}}" wx:key="{{subjects[index]}}">
+  <view class="cu-item">
+    <view class="date">
+      <text>{{tools.sub(subjects[index].contentDate)}}</text>
+    </view>
+    <view class="content" bindtap="checkContents" data-id="{{subjects[index].id}}">
+      <text wx:if="{{subjects[index].title!==''}}">{{subjects[index].title}}</text>
+    </view>
+  </view>
+</view>

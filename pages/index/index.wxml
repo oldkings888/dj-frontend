@@ -1,0 +1,29 @@
+<!-- index.wxml -->
+<!-- <view style="height:{{screenHeight+100}}rpx"> -->
+  <image src="../../assets/images/home_img.png"></image>
+<view class="cu-bar search bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入您要搜索的关键词" confirm-type="search" value="{{searchInput}}" bindinput="wxsearchInput"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-green shadow-blur round" bindtap="startSearch">搜索</button>
+  </view>
+</view>
+<view class='content clearfix'>
+  <view class="learn">
+    学
+    <text class="big">习</text>
+    关键词
+  </view>
+  <block wx:for="{{searchList}}" wx:key="key" wx:for-index="key">
+    <text class='lab' data-key="{{item}}" style="color:{{randomColorArr[key]}};font-size:{{randomFontSizeArr[key]}}" bindtap='click'>
+      {{item}}
+    </text>
+  </block>
+ <view class='serac_img' catch:longpress="handleRecordStart" catch:touchmove="handleTouchMove" catch:touchend="handleRecordStop">
+    <image src="{{imgUrl}}" mode="widthFix"></image>
+  </view>
+</view>
+ 
+<!-- </view> -->
